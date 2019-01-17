@@ -1,0 +1,29 @@
+.kwd-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 145px);
+  grid-gap: 5px;
+  justify-content: space-between;
+}
+.kwd-gallery a {
+  width: 100%;
+  -webkit-transform: all .3s ease;
+  -moz-transform: all .3s ease;
+  -ms-transform: all .3s ease;
+  -o-transform: all .3s ease;
+  transform: all .3s ease;
+  overflow: hidden;
+}
+.kwd-gallery a img {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.kwd-gallery a:hover img {
+  opacity: .7;
+}
+.kwd-gallery a img {
+  width: 100%;
+  height: auto;
+}
