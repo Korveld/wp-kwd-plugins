@@ -1,1 +1,1 @@
-# wp-kwd-plugins
+# Wordpress plugins

@@ -1,0 +1,33 @@
+.kwd-related-posts {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.kwd-related-posts a.kwd-img-blk {
+  text-decoration: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.kwd-related-posts a.kwd-img-blk img {
+  display: inline-block;
+  border: 3px solid #ccc;
+  margin: 0 10px 10px 0;
+  padding: 3px;
+  transition: border .5s;
+}
+.kwd-related-posts a.kwd-img-blk:last-of-type img {
+  margin-right: 0;
+}
+.kwd-related-posts a.kwd-img-blk:hover img{
+	border: 3px solid #000;
+}
+.tooltip {
+	display: none;
+	background: transparent url(../images/black_arrow.png);
+	font-size: 14px;
+	height: 122px;
+	width: 209px;
+	padding: 25px;
+	color: #fff;
+  box-sizing: border-box;
+}
