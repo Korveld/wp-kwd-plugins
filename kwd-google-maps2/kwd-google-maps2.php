@@ -48,19 +48,18 @@ function kwd_map_2($atts) {
 function kwd_styles_scripts() {
   global $kwd_maps_array;
   global $api_key;
-  wp_register_script('kwd_google_scripts', 'https://maps.googleapis.com/maps/api/js?key=' . $api_key . '&callback=initMap&language=en', '', '', null);
-  wp_register_script('kwd_maps_2', plugins_url( 'js/kwd-maps-2.js' , __FILE__ ), array('kwd_google_scripts'), '', null);
+  wp_register_script('kwd_google_scripts', 'https://maps.googleapis.com/maps/api/js?key=' . $api_key . '&callback=initMap&language=en', '', array('kwd_maps_2'), null);
+  wp_register_script('kwd_maps_2', plugins_url( 'js/kwd-maps-2.js' , __FILE__ ), '', '', null);
 
-  wp_enqueue_script('kwd_google_scripts');
   wp_enqueue_script('kwd_maps_2');
+  wp_enqueue_script('kwd_google_scripts');
 
   wp_localize_script('kwd_maps_2', 'kwdObj', $kwd_maps_array);
 }
 
 function kwd_add_async_attribute( $tag, $handle ) {
   $handles = array(
-    'kwd_google_scripts',
-    'kwd_maps_2',
+    'kwd_google_scripts'
   );
   foreach( $handles as $defer_script) {
     if ( $defer_script === $handle ) {
